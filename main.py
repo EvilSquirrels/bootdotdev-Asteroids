@@ -11,12 +11,19 @@ Screen height: {SCREEN_HEIGHT}
           ''')
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    log_state()
+    
+    clock = pygame.time.Clock()
+    dt = 0
+
     while True:
+        log_state()
         for event in pygame.event.get():
             pass
         screen.fill("black")
         pygame.display.flip()
+        dt = (clock.tick(60) / 1000)
+
+
 
 #Do not modify below this line
 
